@@ -1,4 +1,9 @@
-use \App\Item;
+<?php
+
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+use App\Item;
+
 
   class ItemsController extends Controller
   {
@@ -9,7 +14,7 @@ use \App\Item;
         $items = [];
         if ($keyword) {
             $client = new \RakutenRws_Client();
-            $client->setApplicationId(env('RAKUTEN_1051839584335058308'));
+            $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
 
             $rws_response = $client->execute('IchibaItemSearch', [
                 'keyword' => $keyword,
@@ -34,3 +39,5 @@ use \App\Item;
         ]);
     }
   }
+  
+  ?>

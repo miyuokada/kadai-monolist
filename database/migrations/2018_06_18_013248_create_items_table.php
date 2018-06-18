@@ -20,6 +20,8 @@ class CreateItemsTable extends Migration
             $table->string('url');
             $table->string('image_url');
             $table->timestamps();
+            
+            
         });
     }
 

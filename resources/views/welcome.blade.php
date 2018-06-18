@@ -14,5 +14,6 @@
 @endsection
 
 @section('content')
-    mihanahaohana
+    @include('items.items')
+    {!! $items->render() !!}
 @endsection
